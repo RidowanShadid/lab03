@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="HTML form with elements" />
+  <meta name="keywords" content="HTML Form"/>
+  <meta name="author" content="Ridowan Ahmed Shadid"  />
+  <title>HTML Form </title>
+</head>
+<body>
+<a href="http://www.swin.edu.au"><img src="logo.png" alt="logo"></a>
+<h1>CWA Help Desk Appointment</h1>
+<p> The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday<br>
+<br>Check Blackboard for when CWA tutors will be there. </p>
+<form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+<fieldset>
+	<legend>Student Details</legend>
+		<p><label for="sid"> Student ID</label>
+			<input type="text" name="sid" id="sid"  size="10" pattern="\d{7,10}" required="required"/></p>
+		<p><label for="gname"> Given Name</label>
+			<input type="text" name="gname" id="gname" maxlength="15" pattern="^[a-zA-Z\s]+$" size="15" required="required"/>
+		<label for="fname"> Family Name</label>
+			<input type="text" name="fname" id="fname" maxlength="15" pattern="^[a-zA-Z\s]+$" size="15" required="required"/></p>
+</fieldset>
+<fieldset>
+	<legend>Your Unit</legend>
+<p>
+<input type="radio" name="rating" id="sub" value="sub" required="required"/> 
+<label for="sub">COS10011</label>
+<input type="radio" name="rating" id="sub1" value="sub1" required="required"/> 
+<label for="sub1">COS60004</label>
+<input type="radio" name="rating" id="sub2" value="sub2" required="required"/> 
+<label for="sub2">COS60007</label>
+<p><label for="ytutor">Your tutor</label> 
+			<select name="ytutor" id="ytutor">
+				<option value="Nuru">Nurul Islam</option>			
+				<option value="Bichi">Rofiqur Islam</option>
+				<option value="botol">Monjurul Islam</option>
+				<option value="telapoka">Shofiqur Islam</option>
+				<option value="Baburchi">Fokruddin</option>
+				<option value="padma">Bokkor</option>
+				<option value="other">Other</option>
+			</select>
+		</p>
+</fieldset>
+<fieldset>
+			<legend>Issue</legend>
+		<p>HTML
+				<input type="checkbox" id="CSS" name="category[]" value="CSS" checked="checked"/>
+			<label for="CSS">CSS</label> 
+				<input type="checkbox" id="JS" name="category[]" value="JS"/>
+			<label for="JS">JavaScript</label>
+				<input type="checkbox" id="PHP" name="category[]" value="PHP"/>
+			<label for="PHP">PHP</label>
+				<input type="checkbox" id="MS" name="category[]" value="MS"/>
+			<label for="MS">MySQL</label>
+		</p>
+		<p><label for="comments">Description of Issues</label>
+		</p>
+			<textarea id="comments" name="comments" rows="4" cols="40" placeholder="Write description of your problem here . . " ></textarea>
+</fieldset>
+<fieldset>
+	<legend>Prefferred Date/Time</legend>
+		<p><label for="date"> Date</label>
+			<input type="text" name="date" id="date"  size="10" pattern="^\d{2}-\d{2}-\d{4}$" placeholder="dd/mm/yyyy" required="required"/></p>
+		<p><label for="time">Time</label>
+			<input type="text" name="time" id="time"  size="5" pattern="\d{1,2}\:\d{1,2}\" placeholder="00:00" required="required"/></p>
+</fieldset>
+	<input type= "submit" value="Book"/>
+	<input type= "reset" value="Reset Form"/>
+</form>
+</body>
+</html>
